@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Landing Pages — 5 Demos</title>
+    <meta
+      name="description"
+      content="Five modern, responsive shopping landing page demos built with HTML, CSS and JavaScript."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      body {
+        --bg: #09090b;
+        --surface: #18181b;
+        --card: #111113;
+        --text: #fafafa;
+        --muted: #a1a1aa;
+        --line: rgba(255, 255, 255, 0.08);
+        --font-head: "Space Grotesk", var(--font);
+        --accent: #a78bfa;
+      }
+      .hub-hero {
+        text-align: center;
+        padding: clamp(70px, 10vw, 130px) 0 60px;
+        position: relative;
+        overflow: hidden;
+      }
+      .hub-hero::before {
+        content: "";
+        position: absolute;
+        inset: -40% -20% auto;
+        height: 600px;
+        z-index: -1;
+        background: conic-gradient(
+          from 90deg,
+          #8b5cf6,
+          #ec4899,
+          #f59e0b,
+          #16a34a,
+          #2563eb,
+          #8b5cf6
+        );
+        filter: blur(120px);
+        opacity: 0.25;
+        animation: spin 25s linear infinite;
+      }
+      .hub-hero h1 {
+        font-size: clamp(2.6rem, 7vw, 5.5rem);
+        margin-bottom: 18px;
+      }
+      .hub-hero h1 span {
+        background: linear-gradient(
+          90deg,
+          #c4b5fd,
+          #f9a8d4,
+          #fcd34d,
+          #86efac,
+          #93c5fd
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .hub-hero p {
+        color: var(--muted);
+        max-width: 560px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+      }
+      .demos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+        gap: 26px;
+        padding-bottom: 100px;
+      }
+      .demo {
+        display: block;
+        border-radius: 22px;
+        overflow: hidden;
+        background: var(--card);
+        border: 1px solid var(--line);
+        transition:
+          transform 0.6s var(--ease),
+          border-color 0.4s;
+      }
+      .demo:hover {
+        transform: translateY(-10px);
+        border-color: var(--c);
+      }
+      .demo-preview {
+        aspect-ratio: 16/10;
+        position: relative;
+        overflow: hidden;
+        background: var(--c-bg);
+        display: flex;
+        align-items: flex-end;
+        padding: 24px;
+      }
+      .demo-preview img {
+        position: absolute;
+        right: -10%;
+        top: 10%;
+        width: 60%;
+        aspect-ratio: 3/4;
+        object-fit: cover;
+        border-radius: 16px;
+        transform: rotate(6deg);
+        transition: transform 0.8s var(--ease);
+        box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.5);
+      }
+      .demo:hover .demo-preview img {
+        transform: rotate(0) scale(1.05) translateX(-6%);
+      }
+      .demo-preview strong {
+        position: relative;
+        font-family: var(--f);
+        font-size: 2rem;
+        color: var(--c-ink);
+        line-height: 1;
+      }
+      .demo-preview small {
+        display: block;
+        font-family: var(--font);
+        font-size: 0.8rem;
+        opacity: 0.75;
+        margin-top: 6px;
+        font-weight: 500;
+      }
+      .demo-body {
+        padding: 22px 24px 26px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+      }
+      .demo-body h3 {
+        font-size: 1.15rem;
+        margin-bottom: 4px;
+      }
+      .demo-body p {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      .swatches {
+        display: flex;
+      }
+      .swatches i {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        border: 2px solid var(--card);
+        margin-left: -6px;
+      }
+      .go {
+        width: 46px;
+        height: 46px;
+        flex: none;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: var(--c);
+        color: #fff;
+        transition: transform 0.5s var(--ease);
+      }
+      .demo:hover .go {
+        transform: rotate(-45deg);
+      }
+      footer {
+        text-align: center;
+        color: var(--muted);
+        padding: 30px 0 40px;
+        border-top: 1px solid var(--line);
+        font-size: 0.88rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hub-hero">
+      <div class="container">
+        <span class="eyebrow">HTML · CSS · JavaScript</span>
+        <h1 class="reveal">5 <span>Shopping</span><br />Landing Pages</h1>
+        <p class="reveal" style="--d: 0.15s">
+          Ultra-modern, fully responsive storefront demos, each with its own
+          colour system, typography and animation style. Pick one to explore.
+        </p>
+      </div>
+    </header>
+
+    <main class="container demos">
+      <a
+        href="aurora.html"
+        class="demo reveal"
+        style="
+          --c: #a855f7;
+          --c-bg: linear-gradient(135deg, #1e1038, #3b0d2e);
+          --c-ink: #fff;
+          --f: &quot;Space Grotesk&quot;;
+        "
+      >
+        <div class="demo-preview">
+          <img
+            src="https://picsum.photos/seed/aurora-hero/400/530"
+            alt=""
+            loading="lazy"
+          /><strong>LUMÉ<small>Fashion · Dark glassmorphism</small></strong>
+        </div>
+        <div class="demo-body">
+          <div>
+            <h3>01 — Aurora</h3>
+            <p>Neon gradients, glowing orbs, glass cards</p>
+          </div>
+          <div class="swatches">
+            <i style="background: #8b5cf6"></i
+            ><i style="background: #ec4899"></i
+            ><i style="background: #0b0816"></i>
+          </div>
+          <span class="go">→</span>
+        </div>
+      </a>
+      <a
+        href="mint.html"
+        class="demo reveal"
+        style="
+          --d: 0.08s;
+          --c: #16a34a;
+          --c-bg: #e8f5ec;
+          --c-ink: #12301f;
+          --f: Georgia, serif;
+        "
+      >
+        <div class="demo-preview">
+          <img
+            src="https://picsum.photos/seed/mint-hero/400/530"
+            alt=""
+            loading="lazy"
+          /><strong
+            >Verdé<small>Organic grocery · Fresh &amp; airy</small></strong
+          >
+        </div>
+        <div class="demo-body">
+          <div>
+            <h3>02 — Mint</h3>
+            <p>Morphing blob, serif type, soft greens</p>
+          </div>
+          <div class="swatches">
+            <i style="background: #16a34a"></i
+            ><i style="background: #f59e0b"></i
+            ><i style="background: #f6fbf7"></i>
+          </div>
+          <span class="go">→</span>
+        </div>
+      </a>
+      <a
+        href="noir.html"
+        class="demo reveal"
+        style="
+          --d: 0.16s;
+          --c: #c9a35c;
+          --c-bg: #0a0a0a;
+          --c-ink: #e8c98a;
+          --f: Georgia, serif;
+        "
+      >
+        <div class="demo-preview">
+          <img
+            src="https://picsum.photos/seed/noir-hero/400/530?grayscale"
+            alt=""
+            loading="lazy"
+          /><strong
+            >MAISON NOIR<small>Luxury watches · Black &amp; gold</small></strong
+          >
+        </div>
+        <div class="demo-body">
+          <div>
+            <h3>03 — Noir Gold</h3>
+            <p>Cinematic parallax, elegant minimalism</p>
+          </div>
+          <div class="swatches">
+            <i style="background: #0a0a0a"></i
+            ><i style="background: #c9a35c"></i
+            ><i style="background: #f3ede2"></i>
+          </div>
+          <span class="go">→</span>
+        </div>
+      </a>
+      <a
+        href="sunset.html"
+        class="demo reveal"
+        style="
+          --c: #ff5a1f;
+          --c-bg: #fff7ef;
+          --c-ink: #1a1a1a;
+          --f: &quot;Arial Black&quot;;
+        "
+      >
+        <div class="demo-preview">
+          <img
+            src="https://picsum.photos/seed/kickz-hero/400/530"
+            alt=""
+            loading="lazy"
+          /><strong>KICKZ<small>Sneakers · Neo-brutalist</small></strong>
+        </div>
+        <div class="demo-body">
+          <div>
+            <h3>04 — Sunset</h3>
+            <p>Bold type, hard shadows, rotating stage</p>
+          </div>
+          <div class="swatches">
+            <i style="background: #ff5a1f"></i
+            ><i style="background: #1a1a1a"></i
+            ><i style="background: #ffe8d6"></i>
+          </div>
+          <span class="go">→</span>
+        </div>
+      </a>
+      <a
+        href="ocean.html"
+        class="demo reveal"
+        style="
+          --d: 0.08s;
+          --c: #2563eb;
+          --c-bg: linear-gradient(135deg, #dbeafe, #cffafe);
+          --c-ink: #0b1b3a;
+          --f: system-ui;
+        "
+      >
+        <div class="demo-preview">
+          <img
+            src="https://picsum.photos/seed/oc-b1/400/530"
+            alt=""
+            loading="lazy"
+          /><strong>Voltix<small>Electronics · Clean bento grid</small></strong>
+        </div>
+        <div class="demo-body">
+          <div>
+            <h3>05 — Ocean</h3>
+            <p>Bento layout, crisp blues, gradient text</p>
+          </div>
+          <div class="swatches">
+            <i style="background: #2563eb"></i
+            ><i style="background: #06b6d4"></i
+            ><i style="background: #f5f8ff"></i>
+          </div>
+          <span class="go">→</span>
+        </div>
+      </a>
+    </main>
+
+    <footer>
+      Built with plain HTML, CSS &amp; JS · All content is demo data ·
+      <span class="year"></span>
+    </footer>
+    <script src="assets/js/index.js" defer></script>
+  </body>
+</html>

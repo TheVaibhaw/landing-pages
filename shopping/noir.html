@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maison Noir — Luxury Watches & Jewellery</title>
+<meta name="description" content="Maison Noir — Luxury Watches & Jewellery — demo shopping landing page.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://picsum.photos">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  body{font-weight:300}
+  .announce{letter-spacing:.2em;text-transform:uppercase;font-size:.72rem}
+  .logo{letter-spacing:.3em;font-size:1.15rem;font-weight:700}
+  .logo-dot{display:none}
+  .hero{min-height:calc(100vh - 110px);display:flex;align-items:center;padding:0;isolation:isolate;text-align:center}
+  .hero-bg{position:absolute;inset:-10% 0 0;z-index:-2}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;filter:grayscale(.3) brightness(.45)}
+  .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at center,transparent,#0a0a0a 85%)}
+  .hero h1{font-size:clamp(2.8rem,8vw,7rem);font-weight:500}
+  .hero h1 i{color:var(--primary)}
+  .hero .lead{margin-inline:auto}
+  .hero-ctas{justify-content:center}
+  .gold-line{width:1px;height:70px;background:linear-gradient(var(--primary),transparent);margin:0 auto;animation:drop 2.4s ease-in-out infinite}
+  @keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+  .eyebrow{color:var(--primary);letter-spacing:.35em}
+  .section-head h2{font-weight:500}
+  .product{background:transparent;border-color:transparent}
+  .product-info{text-align:center}
+  .price-row{justify-content:center;gap:12px}
+  .price{color:var(--primary);font-weight:500}
+  .cat-card{aspect-ratio:2/3}
+  .cat-card h3{font-weight:500;letter-spacing:.04em}
+  .newsletter{background:var(--surface);color:var(--text);border:1px solid var(--line)}
+  .nl-form{background:transparent;border-color:var(--line)}
+  .nl-form button{background:var(--primary);color:#0a0a0a}
+  </style>
+</head>
+<body data-theme="noir">
+<div class="loader"><span></span></div>
+<div class="progress"></div>
+
+<div class="announce">Complimentary engraving & insured express shipping on every order</div>
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#" class="logo"><span class="logo-dot"></span>MAISON NOIR</a>
+    <nav class="nav-links"><a href="#shop">Watches</a><a href="#shop">Jewellery</a><a href="#shop">Leather</a><a href="#shop">Fragrance</a><a href="#shop">Atelier</a></nav>
+    <div class="nav-actions">
+      <button class="icon-btn" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+      <button class="icon-btn" aria-label="Account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></button>
+      <button class="icon-btn open-cart" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 7h12l1 14H5L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><span class="cart-count">0</span></button>
+      <button class="icon-btn menu-toggle" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu"><button class="icon-btn close" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button><a href="#shop">Watches</a><a href="#shop">Jewellery</a><a href="#shop">Leather</a><a href="#shop">Fragrance</a><a href="#shop">Atelier</a><a href="index.html">← All demos</a></div>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-bg" data-parallax=".3"><img src="https://picsum.photos/seed/noir-hero/1800/1200?grayscale" alt="Luxury watch close-up"></div>
+    <div class="container">
+      <span class="eyebrow reveal">Since 1924 · Genève</span>
+      <h1 data-split>Time, <i>refined.</i></h1>
+      <p class="lead reveal" style="--d:.2s">Hand-assembled Swiss movements and ethically sourced gold. Each piece is numbered, signed and made to outlive you.</p>
+      <div class="hero-ctas reveal" style="--d:.35s"><a href="#shop" class="btn btn-primary">Discover the collection</a><a href="#deal-sec" class="btn btn-ghost">Book a private viewing</a></div>
+      <div class="gold-line"></div>
+    </div>
+  </section>
+
+  <div class="marquee" id="marquee"></div>
+
+  <section class="section" id="categories-sec">
+    <div class="container">
+      <div class="section-head reveal"><div><span class="eyebrow">Categories</span><h2>The collections</h2></div><p>Hand-picked collections, refreshed every week. Tap a category to jump straight in.</p></div>
+      <div class="cat-grid" id="categories"></div>
+    </div>
+  </section>
+
+  <section class="section" id="shop" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal"><div><span class="eyebrow">Trending now</span><h2>Bestsellers this week</h2></div><div class="filters" id="filters"></div></div>
+      <div class="product-grid" id="products"></div>
+    </div>
+  </section>
+
+  <section class="container" id="deal-sec">
+    <div class="deal reveal">
+      <div class="deal-content">
+        <span class="eyebrow">Private Atelier</span>
+        <h2>The Tourbillon Series</h2>
+        <p class="muted">Only 25 pieces worldwide. Reserve a private viewing in Geneva, Paris or New York.</p>
+        <div class="countdown"></div>
+        <button class="btn btn-primary" data-add="0">Grab the deal →</button>
+      </div>
+      <div class="deal-img"><img src="https://picsum.photos/seed/no-deal/900/800" alt="The Tourbillon Series" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container"><div class="features" id="features"></div></div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal"><div><span class="eyebrow">Reviews</span><h2>Words from our clients</h2></div>
+        <div class="testi-nav"><button class="testi-prev" aria-label="Previous"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg></button><button class="testi-next" aria-label="Next"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></button></div></div>
+      <div class="testi-wrap reveal"><div class="testi-track" id="testimonials"></div></div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="newsletter reveal-zoom reveal">
+      <h2>The Private List</h2>
+      <p>Invitations to unveilings, atelier events and pieces never shown publicly.</p>
+      <form class="nl-form"><input type="email" required placeholder="Enter your email" aria-label="Email"><button type="submit">Subscribe</button></form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><a href="#" class="logo"><span class="logo-dot"></span>MAISON NOIR</a><p class="muted" style="margin-top:14px;max-width:320px">Demo storefront built with plain HTML, CSS &amp; JavaScript. All products and reviews are placeholder content.</p>
+        <div class="socials"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="X">X</a><a href="#" aria-label="TikTok">TT</a><a href="#" aria-label="YouTube">YT</a></div></div>
+      <div><h5>Shop</h5><ul><li><a href="#shop">Watches</a></li><li><a href="#shop">Jewellery</a></li><li><a href="#shop">Leather</a></li><li><a href="#shop">Fragrance</a></li></ul></div>
+      <div><h5>Help</h5><ul><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li><li><a href="#">Order tracking</a></li><li><a href="#">FAQ</a></li></ul></div>
+      <div><h5>Company</h5><ul><li><a href="#">About us</a></li><li><a href="#">Careers</a></li><li><a href="#">Stores</a></li><li><a href="index.html">All demos</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© <span class="year"></span> MAISON NOIR. Demo only.</span><span>Visa · Mastercard · PayPal · Apple Pay</span></div>
+  </div>
+</footer>
+
+<div class="overlay"></div>
+<aside class="drawer" aria-label="Shopping bag">
+  <div class="drawer-head"><h3>Your bag</h3><button class="icon-btn close-cart" aria-label="Close bag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="drawer-body"></div>
+  <div class="drawer-foot"><div class="row"><span>Subtotal</span><span class="cart-total">0</span></div><button class="btn btn-primary">Checkout securely</button></div>
+</aside>
+<div class="toast" role="status"></div>
+<button class="to-top" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 15 6-6 6 6"/></svg></button>
+
+<script>window.SHOP = {"products": [{"name": "Héritage Automatic 40mm", "cat": "Watches", "price": 4850, "seed": "no-p1", "badge": "LIMITED"}, {"name": "18k Gold Cuban Chain", "cat": "Jewellery", "price": 2390, "seed": "no-p2"}, {"name": "Calfskin Weekender", "cat": "Leather", "price": 1290, "seed": "no-p3"}, {"name": "Oud Nocturne 100ml", "cat": "Fragrance", "price": 340, "seed": "no-p4", "badge": "NEW"}, {"name": "Chronographe Noir", "cat": "Watches", "price": 6200, "seed": "no-p5"}, {"name": "Diamond Tennis Bracelet", "cat": "Jewellery", "price": 3950, "seed": "no-p6", "old": 4400}, {"name": "Signature Card Holder", "cat": "Leather", "price": 290, "seed": "no-p7"}, {"name": "Ambre Royal 50ml", "cat": "Fragrance", "price": 260, "seed": "no-p8"}], "categories": [{"name": "Watches", "count": 48, "seed": "no-c1"}, {"name": "Jewellery", "count": 72, "seed": "no-c2"}, {"name": "Leather", "count": 36, "seed": "no-c3"}, {"name": "Fragrance", "count": 18, "seed": "no-c4"}], "brands": ["Forbes", "Robb Report", "Hodinkee", "Vanity Fair", "Monocle", "The Rake", "Tatler", "Esquire"], "testimonials": [{"name": "Alexander Hart", "role": "Collector, London", "text": "The finishing on the Héritage rivals pieces three times its price. Exceptional."}, {"name": "Isabelle Laurent", "role": "Paris", "text": "The concierge remembered my anniversary and arranged engraving. Truly bespoke."}, {"name": "Marcus Chen", "role": "Singapore", "text": "Insured delivery arrived in 48 hours, presented like a jewel box ceremony."}, {"name": "Sophia Grant", "role": "New York", "text": "My tennis bracelet is breathtaking. I’ve already ordered the matching earrings."}], "features": [["shield", "Lifetime Warranty", "Serviced by master watchmakers."], ["truck", "Insured Delivery", "White-glove, fully insured."], ["refresh", "Certified Authentic", "Every piece numbered & papered."], ["chat", "Personal Concierge", "Your dedicated advisor."]], "currency": "€"};</script>
+<script src="assets/js/index.js" defer></script>
+</body>
+</html>
