@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thevaibhaw.github.io/landing-pages/sitemap.xml
