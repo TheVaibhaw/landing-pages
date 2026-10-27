@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leo Hart — Brand Designer & 3D Artist</title>
+<meta name="description" content="Leo Hart — Brand Designer & 3D Artist: demo portfolio template.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://picsum.photos">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  body{background:#0f0c29}
+  .mesh{position:fixed;inset:0;z-index:-1;overflow:hidden;background:#0f0c29}
+  .mesh span{position:absolute;width:55vmax;height:55vmax;border-radius:50%;filter:blur(90px);opacity:.6;animation:drift 22s ease-in-out infinite alternate}
+  .mesh span:nth-child(1){background:#6d28d9;top:-20%;left:-15%}
+  .mesh span:nth-child(2){background:#0ea5e9;bottom:-25%;right:-15%;animation-delay:-7s}
+  .mesh span:nth-child(3){background:#ec4899;top:30%;left:40%;width:35vmax;height:35vmax;animation-delay:-14s}
+  @keyframes drift{to{transform:translate(12vw,8vh) scale(1.2) rotate(40deg)}}
+  .noise{position:fixed;inset:0;z-index:-1;opacity:.06;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  .hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:50px;align-items:center}
+  .hero h1{font-size:clamp(2.8rem,7.5vw,6.2rem);text-transform:uppercase;letter-spacing:-.03em}
+  .hero h1 .out{color:transparent;-webkit-text-stroke:1.5px #fff}
+  .glass{background:var(--card);border:1px solid var(--line);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:var(--radius)}
+  .hero-card{padding:14px;transition:transform .6s var(--ease)}
+  .hero-card img{border-radius:18px;aspect-ratio:4/5;object-fit:cover;width:100%}
+  .hero-card .meta{display:flex;justify-content:space-between;align-items:center;padding:14px 6px 4px;font-size:.9rem}
+  .hero-card .meta b{font-family:var(--font-head)}
+  .orbit{position:absolute;width:120px;height:120px;top:-30px;right:-20px;animation:spin 14s linear infinite}
+  .orbit text{font-size:11px;letter-spacing:3px;fill:#fff;text-transform:uppercase}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .service,.testi,form.cform,.stats div{background:var(--card);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+  .field input,.field textarea{background:rgba(255,255,255,.06)}
+  .nav.scrolled{background:rgba(15,12,41,.5)}
+  .mobile-menu{background:#0f0c29}
+  .btn-primary{background:#fff;color:#0f0c29}
+  .eyebrow{color:#c4b5fd}
+  .marquee-track span{text-transform:uppercase}
+  .marquee-track span:nth-child(even){color:#f9a8d4}
+  .preloader{background:linear-gradient(135deg,#6d28d9,#ec4899);color:#fff}
+  @media (max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-card{max-width:440px}}
+  </style>
+</head>
+<body data-theme="mesh">
+<div class="mesh"><span></span><span></span><span></span></div><div class="noise"></div>
+<div class="preloader">Leo Hart</div>
+<div class="progress"></div>
+<div class="cursor"></div><div class="cursor-dot"></div>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#home" class="logo"><b>LH</b>Leo Hart</a>
+    <nav class="nav-links"><a href="#about">About</a><a href="#services">Services</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+    <div class="nav-right">
+      <span class="status"><i></i>Available for work</span>
+      <button class="burger" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu"><a href="#about">About</a><a href="#services">Services</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a><a href="index.html" style="font-size:1rem;opacity:.6">← All templates</a></div>
+
+<main>
+
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow reveal">Independent studio · Est. 2018</span>
+        <h1 data-split>Brands <span class="out">with</span> a pulse.</h1>
+        <p class="lead reveal" style="--d:.3s">I’m Leo, a <span class="typed"></span> creating identities, 3D worlds and motion systems for startups that refuse to look ordinary.</p>
+        <div class="hero-ctas reveal" style="--d:.45s"><a href="#work" class="btn btn-primary magnetic">Explore work ↘</a><a href="#contact" class="btn btn-ghost magnetic">Book a call</a></div>
+      </div>
+      <div class="reveal" style="--d:.3s;position:relative">
+        <div class="glass hero-card" data-tilt><img src="https://picsum.photos/seed/lh-hero/700/880" alt="3D brand artwork">
+          <div class="meta"><div><b>Prism Identity</b><br><span class="muted">Brand + 3D · 2026</span></div><span class="tag">Featured</span></div></div>
+        <svg class="orbit" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="c" d="M60,60 m-45,0 a45,45 0 1,1 90,0 a45,45 0 1,1 -90,0"/></defs><text><textPath href="#c">Available for work ✦ Available for work ✦</textPath></text></svg>
+      </div>
+    </div>
+    <a href="#about" class="scroll-hint" aria-label="Scroll down"></a>
+  </section>
+
+  <div class="marquee" id="marquee"></div>
+
+  <section class="section" id="about">
+    <div class="container about">
+      <div class="about-img img-reveal"><img src="https://picsum.photos/seed/pf-leo/700/875" alt="Portrait of Leo Hart" loading="lazy"></div>
+      <div class="reveal">
+        <span class="eyebrow">About me</span>
+        <h2>Strategy-led design with a sculptor’s eye.</h2>
+        <p>I help early-stage companies find their visual voice: logo, type, colour, 3D assets and motion guidelines, all built as one living system.</p><p>My studio has rebranded 70+ startups that have gone on to raise over $900M combined.</p>
+        <div class="stats"><div><strong data-count="8" data-suffix="+">0</strong><span>Years</span></div><div><strong data-count="70" data-suffix="+">0</strong><span>Brands</span></div><div><strong data-count="15" data-suffix="">0</strong><span>Awards</span></div></div>
+        <div class="skills" id="skills"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal"><div><span class="eyebrow">Services</span><h2>What I can do for you</h2></div><p>Flexible engagements, from a two-week sprint to a long-term partnership.</p></div>
+      <div class="services" id="services-list"></div>
+    </div>
+  </section>
+
+  <section class="section" id="work" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal"><div><span class="eyebrow">Selected work</span><h2>Featured <i>projects</i></h2></div><div class="filters" id="filters"></div></div>
+      <div class="projects" id="projects"></div>
+    </div>
+  </section>
+
+  <section class="section" id="experience" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal"><div><span class="eyebrow">Experience</span><h2>The journey so far</h2></div><a href="#" class="btn btn-ghost magnetic">Download CV ↓</a></div>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal"><div><span class="eyebrow">Kind words</span><h2>What clients say</h2></div></div>
+      <div class="testi-grid" id="testimonials"></div>
+    </div>
+  </section>
+
+  <section class="section" id="contact" style="padding-top:0">
+    <div class="container contact">
+      <div class="reveal">
+        <span class="eyebrow">Contact</span>
+        <h2>Let’s build something great.</h2>
+        <p class="muted">Have a project in mind? Tell me a bit about it and I’ll reply within 24 hours.</p>
+        <div class="contact-list">
+          <a href="mailto:leo@example.com"><span>✉</span>leo@example.com</a>
+          <a href="tel:+10000000000"><span>☏</span>+1 (000) 000-0000</a>
+          <a href="#"><span>⌖</span>Remote · Worldwide</a>
+        </div>
+        <div class="socials"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="GitHub">gh</a><a href="#" aria-label="Dribbble">dr</a><a href="#" aria-label="Instagram">ig</a></div>
+      </div>
+      <form class="cform reveal" style="--d:.15s">
+        <div class="field"><input id="n" required placeholder=" "><label for="n">Your name</label></div>
+        <div class="field"><input id="e" type="email" required placeholder=" "><label for="e">Email address</label></div>
+        <div><p class="muted" style="font-size:.88rem;margin-bottom:10px">Budget</p>
+          <div class="chips"><input type="radio" name="b" id="b1" checked><label for="b1">&lt; $5k</label><input type="radio" name="b" id="b2"><label for="b2">$5k – $15k</label><input type="radio" name="b" id="b3"><label for="b3">$15k – $50k</label><input type="radio" name="b" id="b4"><label for="b4">$50k+</label></div></div>
+        <div class="field"><textarea id="m" required placeholder=" "></textarea><label for="m">Tell me about your project</label></div>
+        <button type="submit" class="btn btn-primary" style="justify-content:center">Send message →</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<div class="big-name">Leo Hart</div>
+<footer class="footer">
+  <div class="container"><span>© <span class="year"></span> Leo Hart. Demo template.</span><a href="index.html">← All templates</a><span>Made with HTML, CSS &amp; JS</span></div>
+</footer>
+
+<div class="modal" role="dialog" aria-modal="true"><div class="modal-box"><button class="modal-close" aria-label="Close">×</button><div class="modal-content"></div></div></div>
+<div class="toast" role="status"></div>
+<button class="to-top" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 15 6-6 6 6"/></svg></button>
+
+<script>window.PF = {"roles": ["Brand Designer", "3D Artist", "Motion Designer"], "skills": [["Brand Identity", 96], ["3D (Blender, C4D)", 90], ["Motion Design", 88], ["Art Direction", 92], ["Web Design", 84]], "marquee": ["Brand Identity", "3D Design", "Motion", "Packaging", "Art Direction", "Web Design", "Type Design"], "services": [{"title": "Brand Identity", "text": "Logos, typography, colour and guidelines that scale with you.", "tags": ["Strategy", "Guidelines"]}, {"title": "3D & CGI", "text": "Product renders and abstract 3D worlds for launches and campaigns.", "tags": ["Blender", "Octane"]}, {"title": "Motion Systems", "text": "Logo animation and motion language for product and social.", "tags": ["After Effects", "Rive"]}, {"title": "Launch Websites", "text": "Expressive marketing sites that tell your story in seconds.", "tags": ["Figma", "Webflow"]}], "projects": [{"title": "Prism", "cat": "Branding", "client": "Prism AI", "year": "2026", "seed": "lh-1", "text": "Full identity and 3D language for an AI start-up that raised a $40M Series A.", "tags": ["Identity", "3D"]}, {"title": "Volta Energy", "cat": "Branding", "client": "Volta", "year": "2025", "seed": "lh-2", "text": "Rebrand for a clean-energy company, from logo to fleet livery.", "tags": ["Rebrand", "Guidelines"]}, {"title": "Hyper Sneaker", "cat": "3D", "client": "Hyper", "year": "2025", "seed": "lh-3", "text": "CGI launch campaign for a limited sneaker, with zero physical samples.", "tags": ["CGI", "Animation"]}, {"title": "Mellow Coffee", "cat": "Packaging", "client": "Mellow", "year": "2024", "seed": "lh-4", "text": "Packaging system for 18 SKUs with playful, collectible illustration.", "tags": ["Packaging", "Illustration"]}, {"title": "Nebula OS", "cat": "Motion", "client": "Nebula", "year": "2024", "seed": "lh-5", "text": "Motion language and UI animation for a desktop operating system.", "tags": ["Rive", "UI Motion"]}, {"title": "Aero Labs", "cat": "3D", "client": "Aero", "year": "2023", "seed": "lh-6", "text": "Abstract 3D key visuals for a deep-tech research lab.", "tags": ["Octane", "Art Direction"]}], "timeline": [{"when": "2018 — Now", "role": "Founder & Design Director", "org": "Hart Studio", "text": "A small studio crafting brands for ambitious startups."}, {"when": "2016 — 2018", "role": "Senior Designer", "org": "Pentagram", "text": "Worked on identities for cultural and tech clients."}, {"when": "2014 — 2016", "role": "3D Designer", "org": "Buck", "text": "Created CGI for broadcast and product launches."}, {"when": "2010 — 2014", "role": "BA Graphic Design", "org": "Royal College of Art", "text": "Focus on type and spatial design."}], "testimonials": [{"name": "Maya Brooks", "role": "CEO, Prism AI", "text": "Leo gave us a brand that investors remember. Worth every penny.", "img": 29}, {"name": "Ethan Cole", "role": "CMO, Volta", "text": "Strategic, fast and endlessly creative. Our rebrand doubled inbound.", "img": 68}, {"name": "Lina Park", "role": "Founder, Mellow", "text": "Customers literally collect our packaging now. Pure magic.", "img": 23}]};</script>
+<script src="assets/js/index.js" defer></script>
+
+</body>
+</html>

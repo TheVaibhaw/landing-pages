@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elena Marlowe — Photographer & Visual Storyteller</title>
+<meta name="description" content="Elena Marlowe — Photographer & Visual Storyteller: demo portfolio template.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://picsum.photos">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  body{font-size:1.02rem}
+  h1,h2,h3{font-weight:400;letter-spacing:-.01em}
+  .hero{align-items:flex-end;padding-bottom:60px}
+  .hero-top{display:flex;justify-content:space-between;border-bottom:1px solid var(--text);padding-bottom:14px;margin-bottom:30px;font-size:.82rem;text-transform:uppercase;letter-spacing:.14em;flex-wrap:wrap;gap:8px}
+  .hero h1{font-size:clamp(4rem,17vw,15rem);line-height:.82;letter-spacing:-.04em;margin-bottom:0}
+  .hero h1 i{color:var(--accent)}
+  .hero-row{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:30px;margin-top:40px;align-items:end}
+  .hero-row .ph{aspect-ratio:3/4;overflow:hidden}
+  .hero-row .ph img{width:100%;height:100%;object-fit:cover;filter:grayscale(1);transition:filter .8s,transform 1.2s var(--ease)}
+  .hero-row .ph:hover img{filter:none;transform:scale(1.04)}
+  .hero-row .lead{margin:0}
+  .eyebrow::before{background:var(--accent)}
+  .section-head h2{font-size:clamp(2.6rem,7vw,5.5rem)}
+  .section-head h2 i{color:var(--accent)}
+  .projects{grid-template-columns:repeat(3,1fr);gap:40px 28px}
+  .project:nth-child(3n+2){margin-top:70px}
+  .project-media{aspect-ratio:3/4}
+  .project-media img{filter:grayscale(1)}
+  .project:hover .project-media img{filter:none}
+  .project-media .view{border-radius:50%}
+  .project-info h3{font-size:1.7rem}
+  .service{border:0;border-top:1px solid var(--text);background:transparent;padding:28px 0}
+  .service h3{font-size:2rem}
+  .stats div{background:transparent;border:0;border-top:1px solid var(--text);padding:16px 0}
+  .stats strong{font-weight:400}
+  .testi{background:transparent;border:0;border-left:2px solid var(--accent);padding:6px 0 6px 26px}
+  .testi p{font-family:var(--font-head);font-size:1.5rem;line-height:1.3}
+  .field input,.field textarea{background:transparent;border-bottom:1px solid var(--text);border-radius:0}
+  form.cform{background:transparent;border:0;padding:0}
+  .marquee-track span{font-weight:400;font-style:italic;font-size:clamp(2rem,5vw,4rem)}
+  .about-img img{filter:grayscale(1)}
+  @media (max-width:860px){.hero-row{grid-template-columns:1fr 1fr}.hero-row .lead{grid-column:1/-1;order:-1}.projects{grid-template-columns:1fr 1fr}.project:nth-child(3n+2){margin-top:0}}
+  @media (max-width:560px){.projects{grid-template-columns:1fr}}
+  </style>
+</head>
+<body data-theme="editorial">
+
+<div class="preloader">Elena Marlowe</div>
+<div class="progress"></div>
+<div class="cursor"></div><div class="cursor-dot"></div>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#home" class="logo"><b>EM</b>Elena Marlowe</a>
+    <nav class="nav-links"><a href="#about">About</a><a href="#services">Services</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+    <div class="nav-right">
+      <span class="status"><i></i>Available for work</span>
+      <button class="burger" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu"><a href="#about">About</a><a href="#services">Services</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a><a href="index.html" style="font-size:1rem;opacity:.6">← All templates</a></div>
+
+<main>
+
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-top reveal"><span>Portfolio — Vol. 09</span><span>London / Lisbon</span><span>Est. 2012</span></div>
+      <h1 data-split>Elena <i>Marlowe</i></h1>
+      <div class="hero-row">
+        <div class="ph img-reveal"><img src="https://picsum.photos/seed/em-h1/600/800" alt="Portrait photograph"></div>
+        <p class="lead reveal" style="--d:.3s"><span class="typed"></span> capturing quiet moments, bold people and faraway places for Vogue, Kinfolk and Condé Nast Traveller.<br><br><a href="#work" class="btn btn-primary magnetic" style="margin-top:10px">View selected work →</a></p>
+        <div class="ph img-reveal" style="transition-delay:.2s"><img src="https://picsum.photos/seed/em-h2/600/800" alt="Landscape photograph"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" id="marquee"></div>
+
+  <section class="section" id="about">
+    <div class="container about">
+      <div class="about-img img-reveal"><img src="https://picsum.photos/seed/pf-elena/700/875" alt="Portrait of Elena Marlowe" loading="lazy"></div>
+      <div class="reveal">
+        <span class="eyebrow">About me</span>
+        <h2>I photograph the in-between moments.</h2>
+        <p>For over a decade I’ve travelled to 50+ countries with a camera, chasing natural light and honest emotion. My work blends documentary instinct with editorial polish.</p><p>Exhibited at Photo London and Paris Photo. Represented by Atelier Agency.</p>
+        <div class="stats"><div><strong data-count="12" data-suffix="+">0</strong><span>Years</span></div><div><strong data-count="54" data-suffix="">0</strong><span>Countries</span></div><div><strong data-count="200" data-suffix="+">0</strong><span>Editorials</span></div></div>
+        <div class="skills" id="skills"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal"><div><span class="eyebrow">Services</span><h2>What I can do for you</h2></div><p>Flexible engagements, from a two-week sprint to a long-term partnership.</p></div>
+      <div class="services" id="services-list"></div>
+    </div>
+  </section>
+
+  <section class="section" id="work" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal"><div><span class="eyebrow">Selected work</span><h2>Featured <i>projects</i></h2></div><div class="filters" id="filters"></div></div>
+      <div class="projects" id="projects"></div>
+    </div>
+  </section>
+
+  <section class="section" id="experience" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal"><div><span class="eyebrow">Experience</span><h2>The journey so far</h2></div><a href="#" class="btn btn-ghost magnetic">Download CV ↓</a></div>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal"><div><span class="eyebrow">Kind words</span><h2>What clients say</h2></div></div>
+      <div class="testi-grid" id="testimonials"></div>
+    </div>
+  </section>
+
+  <section class="section" id="contact" style="padding-top:0">
+    <div class="container contact">
+      <div class="reveal">
+        <span class="eyebrow">Contact</span>
+        <h2>Let’s build something great.</h2>
+        <p class="muted">Have a project in mind? Tell me a bit about it and I’ll reply within 24 hours.</p>
+        <div class="contact-list">
+          <a href="mailto:elena@example.com"><span>✉</span>elena@example.com</a>
+          <a href="tel:+10000000000"><span>☏</span>+1 (000) 000-0000</a>
+          <a href="#"><span>⌖</span>Remote · Worldwide</a>
+        </div>
+        <div class="socials"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="GitHub">gh</a><a href="#" aria-label="Dribbble">dr</a><a href="#" aria-label="Instagram">ig</a></div>
+      </div>
+      <form class="cform reveal" style="--d:.15s">
+        <div class="field"><input id="n" required placeholder=" "><label for="n">Your name</label></div>
+        <div class="field"><input id="e" type="email" required placeholder=" "><label for="e">Email address</label></div>
+        <div><p class="muted" style="font-size:.88rem;margin-bottom:10px">Budget</p>
+          <div class="chips"><input type="radio" name="b" id="b1" checked><label for="b1">&lt; $5k</label><input type="radio" name="b" id="b2"><label for="b2">$5k – $15k</label><input type="radio" name="b" id="b3"><label for="b3">$15k – $50k</label><input type="radio" name="b" id="b4"><label for="b4">$50k+</label></div></div>
+        <div class="field"><textarea id="m" required placeholder=" "></textarea><label for="m">Tell me about your project</label></div>
+        <button type="submit" class="btn btn-primary" style="justify-content:center">Send message →</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<div class="big-name">Elena Marlowe</div>
+<footer class="footer">
+  <div class="container"><span>© <span class="year"></span> Elena Marlowe. Demo template.</span><a href="index.html">← All templates</a><span>Made with HTML, CSS &amp; JS</span></div>
+</footer>
+
+<div class="modal" role="dialog" aria-modal="true"><div class="modal-box"><button class="modal-close" aria-label="Close">×</button><div class="modal-content"></div></div></div>
+<div class="toast" role="status"></div>
+<button class="to-top" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 15 6-6 6 6"/></svg></button>
+
+<script>window.PF = {"roles": ["Photographer", "Visual Storyteller", "Art Director"], "skills": [["Portrait", 96], ["Editorial & Fashion", 92], ["Travel & Documentary", 94], ["Art Direction", 85], ["Retouching", 88]], "marquee": ["Portraits", "Fashion", "Travel", "Editorial", "Architecture", "Weddings", "Campaigns"], "services": [{"title": "Editorial", "text": "Story-led shoots for magazines, from concept to final selects.", "tags": ["Fashion", "Lifestyle"]}, {"title": "Brand Campaigns", "text": "Considered imagery that gives brands a timeless visual voice.", "tags": ["Art Direction", "Casting"]}, {"title": "Portraiture", "text": "Natural, honest portraits for founders, artists and families.", "tags": ["Studio", "On-location"]}, {"title": "Travel Stories", "text": "Destination features for hotels, tourism boards and publications.", "tags": ["Hospitality", "Documentary"]}], "projects": [{"title": "Salt & Light", "cat": "Travel", "client": "Condé Nast Traveller", "year": "2026", "seed": "em-1", "text": "A 12-page feature on the salt flats of Bolivia, shot over two weeks.", "tags": ["Travel", "Film"]}, {"title": "Quiet Women", "cat": "Portrait", "client": "Personal", "year": "2025", "seed": "em-2", "text": "Ongoing series of portraits of female artisans across Southern Europe.", "tags": ["Portrait", "Exhibition"]}, {"title": "Linen Season", "cat": "Fashion", "client": "Kinfolk", "year": "2025", "seed": "em-3", "text": "Slow-fashion editorial shot entirely in natural light in Puglia.", "tags": ["Editorial", "Fashion"]}, {"title": "North Atlantic", "cat": "Travel", "client": "Visit Iceland", "year": "2024", "seed": "em-4", "text": "Campaign imagery for Iceland’s winter tourism season.", "tags": ["Campaign", "Landscape"]}, {"title": "Studio Faces", "cat": "Portrait", "client": "The Guardian", "year": "2024", "seed": "em-5", "text": "Portraits of 30 UK designers for a weekend magazine special.", "tags": ["Editorial", "Portrait"]}, {"title": "Atelier SS26", "cat": "Fashion", "client": "Atelier Rome", "year": "2023", "seed": "em-6", "text": "Lookbook and campaign for a Roman tailoring house.", "tags": ["Lookbook", "Campaign"]}], "timeline": [{"when": "2019 — Now", "role": "Freelance Photographer", "org": "Represented by Atelier Agency", "text": "Editorial and campaign work for international titles."}, {"when": "2016 — 2019", "role": "Staff Photographer", "org": "Monocle", "text": "Covered design, travel and culture stories in 30 countries."}, {"when": "2013 — 2016", "role": "Assistant Photographer", "org": "Annie Leibovitz Studio", "text": "Learned lighting, production and patience."}, {"when": "2009 — 2012", "role": "BA Photography", "org": "Central Saint Martins", "text": "Graduated with first-class honours."}], "testimonials": [{"name": "Clara Whitfield", "role": "Photo Editor, Kinfolk", "text": "Elena sees light the way painters do. Every frame is a cover candidate.", "img": 41}, {"name": "Rafael Duarte", "role": "Creative Director, Atelier", "text": "Calm on set, extraordinary in the edit. Our best campaign yet.", "img": 59}, {"name": "Hannah Moss", "role": "Editor, Condé Nast Traveller", "text": "Her travel stories make readers book flights. Truly.", "img": 36}]};</script>
+<script src="assets/js/index.js" defer></script>
+
+</body>
+</html>

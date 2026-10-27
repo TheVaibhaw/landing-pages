@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mira Kapoor — Product & UI Designer</title>
+<meta name="description" content="Mira Kapoor — Product & UI Designer: demo portfolio template.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://picsum.photos">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .hero{align-items:flex-start;padding-top:130px}
+  .bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(150px,auto);gap:16px;width:100%}
+  .tile{border-radius:var(--radius);background:var(--card);padding:28px;position:relative;overflow:hidden;box-shadow:var(--shadow);transition:transform .5s var(--ease)}
+  .tile:hover{transform:translateY(-6px) rotate(-.4deg)}
+  .t-main{grid-column:span 3;grid-row:span 2;display:flex;flex-direction:column;justify-content:space-between}
+  .t-main h1{font-size:clamp(2.4rem,6vw,5rem);margin:0}
+  .t-main h1 em{font-style:normal;color:var(--accent)}
+  .t-photo{grid-row:span 2;padding:0}
+  .t-photo img{width:100%;height:100%;object-fit:cover}
+  .t-peach{background:#ffd8c9}.t-lilac{background:#e2dcff}.t-mint{background:#cdeedd}.t-yellow{background:#fff1b8}
+  .tile .big{font-family:var(--font-head);font-size:2.6rem;font-weight:800;line-height:1}
+  .tile small{color:var(--muted)}
+  .t-wide{grid-column:span 2}
+  .avatar-row{display:flex}
+  .avatar-row img{width:42px;height:42px;border-radius:50%;border:3px solid #fff;margin-left:-10px}
+  .avatar-row img:first-child{margin-left:0}
+  .emoji{position:absolute;right:20px;top:18px;font-size:2rem;animation:wiggle 3s ease-in-out infinite}
+  @keyframes wiggle{50%{transform:rotate(14deg) scale(1.1)}}
+  .service{background:var(--card)}
+  .service:nth-child(1){background:#ffe6dc}.service:nth-child(2){background:#ece8ff}.service:nth-child(3){background:#dcf3e6}.service:nth-child(4){background:#fff4c9}
+  .project-media{border-radius:var(--radius)}
+  @media (max-width:900px){.bento{grid-template-columns:repeat(2,1fr)}.t-main{grid-column:span 2;grid-row:auto}.t-photo{grid-row:span 2}.t-wide{grid-column:span 2}}
+  @media (max-width:520px){.bento{grid-template-columns:1fr}.t-main,.t-wide{grid-column:auto}.t-photo{height:340px;grid-row:auto}}
+  </style>
+</head>
+<body data-theme="pastel">
+
+<div class="preloader">Mira Kapoor</div>
+<div class="progress"></div>
+<div class="cursor"></div><div class="cursor-dot"></div>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#home" class="logo"><b>MK</b>Mira Kapoor</a>
+    <nav class="nav-links"><a href="#about">About</a><a href="#services">Services</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+    <div class="nav-right">
+      <span class="status"><i></i>Available for work</span>
+      <button class="burger" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu"><a href="#about">About</a><a href="#services">Services</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a><a href="index.html" style="font-size:1rem;opacity:.6">← All templates</a></div>
+
+<main>
+
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="bento">
+        <div class="tile t-main reveal">
+          <span class="eyebrow">Hello, I’m Mira 👋</span>
+          <h1 data-split>I design products people <em>love</em> to use.</h1>
+          <div><p class="muted" style="margin:18px 0 22px;max-width:520px"><span class="typed"></span>, crafting calm, joyful interfaces for SaaS, fintech and health brands.</p>
+          <div class="hero-ctas"><a href="#work" class="btn btn-primary magnetic">See my work</a><a href="#contact" class="btn btn-ghost magnetic">Let’s talk</a></div></div>
+        </div>
+        <div class="tile t-photo reveal" style="--d:.1s"><img src="https://picsum.photos/seed/pf-mira/500/700" alt="Mira Kapoor portrait"></div>
+        <div class="tile t-peach reveal" style="--d:.15s"><span class="emoji">🎨</span><div class="big" data-count="7" data-suffix="+">0</div><small>Years designing</small></div>
+        <div class="tile t-lilac reveal" style="--d:.2s"><span class="emoji">✨</span><div class="big" data-count="85" data-suffix="+">0</div><small>Products launched</small></div>
+        <div class="tile t-mint t-wide reveal" style="--d:.25s"><div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap"><div><b>Trusted by 40+ teams</b><br><small>Notion, Revolut, Calm &amp; more</small></div>
+          <div class="avatar-row"><img src="https://i.pravatar.cc/80?img=5" alt=""><img src="https://i.pravatar.cc/80?img=8" alt=""><img src="https://i.pravatar.cc/80?img=15" alt=""><img src="https://i.pravatar.cc/80?img=20" alt=""></div></div></div>
+        <div class="tile t-yellow t-wide reveal" style="--d:.3s"><span class="emoji">📍</span><b>Based in Lisbon</b><br><small>Working remotely with teams worldwide · Available from Dec 2026</small></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" id="marquee"></div>
+
+  <section class="section" id="about">
+    <div class="container about">
+      <div class="about-img img-reveal"><img src="https://picsum.photos/seed/pf-mira-2/700/875" alt="Portrait of Mira Kapoor" loading="lazy"></div>
+      <div class="reveal">
+        <span class="eyebrow">About me</span>
+        <h2>Design that’s thoughtful, inclusive and a little bit playful.</h2>
+        <p>I partner with founders and product teams from first sketch to shipped pixels, running research, shaping flows and building design systems that scale.</p><p>My work has been featured on Awwwards, Mobbin and the Figma Community, where my UI kits have 120K+ duplicates.</p>
+        <div class="stats"><div><strong data-count="7" data-suffix="+">0</strong><span>Years</span></div><div><strong data-count="85" data-suffix="+">0</strong><span>Launches</span></div><div><strong data-count="12" data-suffix="">0</strong><span>Awards</span></div></div>
+        <div class="skills" id="skills"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal"><div><span class="eyebrow">Services</span><h2>What I can do for you</h2></div><p>Flexible engagements, from a two-week sprint to a long-term partnership.</p></div>
+      <div class="services" id="services-list"></div>
+    </div>
+  </section>
+
+  <section class="section" id="work" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal"><div><span class="eyebrow">Selected work</span><h2>Featured <i>projects</i></h2></div><div class="filters" id="filters"></div></div>
+      <div class="projects" id="projects"></div>
+    </div>
+  </section>
+
+  <section class="section" id="experience" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal"><div><span class="eyebrow">Experience</span><h2>The journey so far</h2></div><a href="#" class="btn btn-ghost magnetic">Download CV ↓</a></div>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal"><div><span class="eyebrow">Kind words</span><h2>What clients say</h2></div></div>
+      <div class="testi-grid" id="testimonials"></div>
+    </div>
+  </section>
+
+  <section class="section" id="contact" style="padding-top:0">
+    <div class="container contact">
+      <div class="reveal">
+        <span class="eyebrow">Contact</span>
+        <h2>Let’s build something great.</h2>
+        <p class="muted">Have a project in mind? Tell me a bit about it and I’ll reply within 24 hours.</p>
+        <div class="contact-list">
+          <a href="mailto:mira@example.com"><span>✉</span>mira@example.com</a>
+          <a href="tel:+10000000000"><span>☏</span>+1 (000) 000-0000</a>
+          <a href="#"><span>⌖</span>Remote · Worldwide</a>
+        </div>
+        <div class="socials"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="GitHub">gh</a><a href="#" aria-label="Dribbble">dr</a><a href="#" aria-label="Instagram">ig</a></div>
+      </div>
+      <form class="cform reveal" style="--d:.15s">
+        <div class="field"><input id="n" required placeholder=" "><label for="n">Your name</label></div>
+        <div class="field"><input id="e" type="email" required placeholder=" "><label for="e">Email address</label></div>
+        <div><p class="muted" style="font-size:.88rem;margin-bottom:10px">Budget</p>
+          <div class="chips"><input type="radio" name="b" id="b1" checked><label for="b1">&lt; $5k</label><input type="radio" name="b" id="b2"><label for="b2">$5k – $15k</label><input type="radio" name="b" id="b3"><label for="b3">$15k – $50k</label><input type="radio" name="b" id="b4"><label for="b4">$50k+</label></div></div>
+        <div class="field"><textarea id="m" required placeholder=" "></textarea><label for="m">Tell me about your project</label></div>
+        <button type="submit" class="btn btn-primary" style="justify-content:center">Send message →</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<div class="big-name">Mira Kapoor</div>
+<footer class="footer">
+  <div class="container"><span>© <span class="year"></span> Mira Kapoor. Demo template.</span><a href="index.html">← All templates</a><span>Made with HTML, CSS &amp; JS</span></div>
+</footer>
+
+<div class="modal" role="dialog" aria-modal="true"><div class="modal-box"><button class="modal-close" aria-label="Close">×</button><div class="modal-content"></div></div></div>
+<div class="toast" role="status"></div>
+<button class="to-top" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 15 6-6 6 6"/></svg></button>
+
+<script>window.PF = {"roles": ["Product Designer", "UI/UX Designer", "Design Systems Lead"], "skills": [["Product Strategy", 90], ["UI / Visual Design", 96], ["Design Systems", 92], ["Prototyping (Figma, Framer)", 94], ["User Research", 85]], "marquee": ["Product Design", "UX Research", "Design Systems", "Prototyping", "Brand", "Motion", "Accessibility", "Workshops"], "services": [{"title": "Product Design", "text": "From discovery to delivery: flows, wireframes and pixel-perfect UI.", "tags": ["Figma", "FigJam"]}, {"title": "Design Systems", "text": "Scalable component libraries with tokens, docs and dev hand-off.", "tags": ["Tokens", "Storybook"]}, {"title": "UX Research", "text": "Interviews, usability testing and insight synthesis that drive decisions.", "tags": ["Interviews", "Testing"]}, {"title": "No-code Websites", "text": "Fast, beautiful marketing sites built and animated in Framer.", "tags": ["Framer", "Webflow"]}], "projects": [{"title": "Bloom Health App", "cat": "Mobile", "client": "Bloom", "year": "2026", "seed": "mi-1", "text": "A wellness app redesign that lifted 30-day retention from 18% to 41%.", "tags": ["iOS", "Android", "Research"]}, {"title": "Ledger Pro", "cat": "SaaS", "client": "Ledger", "year": "2025", "seed": "mi-2", "text": "Accounting dashboard for SMBs, simplifying 14 workflows into 5.", "tags": ["Dashboard", "Design System"]}, {"title": "Calmly Website", "cat": "Web", "client": "Calmly", "year": "2025", "seed": "mi-3", "text": "Playful marketing site with micro-interactions, built in Framer.", "tags": ["Framer", "Motion"]}, {"title": "Orbit Design System", "cat": "SaaS", "client": "Orbit", "year": "2024", "seed": "mi-4", "text": "300+ components, tokens for 4 brands, and full documentation.", "tags": ["Tokens", "Storybook"]}, {"title": "Wanderly Travel", "cat": "Mobile", "client": "Wanderly", "year": "2024", "seed": "mi-5", "text": "Trip-planning app with collaborative itineraries and offline maps.", "tags": ["Mobile", "Prototyping"]}, {"title": "Pebble Bank", "cat": "Web", "client": "Pebble", "year": "2023", "seed": "mi-6", "text": "Onboarding flow for a neobank, cutting sign-up time by 60%.", "tags": ["Fintech", "UX"]}], "timeline": [{"when": "2023 — Now", "role": "Independent Product Designer", "org": "Studio Mira", "text": "Working with startups across Europe and the US."}, {"when": "2020 — 2023", "role": "Lead Product Designer", "org": "Revolut", "text": "Led design for savings & investments, used by 8M customers."}, {"when": "2018 — 2020", "role": "UI Designer", "org": "Ustwo", "text": "Designed apps for global health and media brands."}, {"when": "2014 — 2018", "role": "BA Interaction Design", "org": "NID Ahmedabad", "text": "Thesis on inclusive design for low-literacy users."}], "testimonials": [{"name": "Tom Alvarez", "role": "CEO, Bloom", "text": "Mira doubled our retention. Her process is calm, clear and wildly effective.", "img": 13}, {"name": "Sara Lind", "role": "PM, Ledger", "text": "She simplifies complexity like no one else. Our users noticed immediately.", "img": 44}, {"name": "James Owusu", "role": "Founder, Calmly", "text": "The site is pure delight. Conversions are up 3× since launch.", "img": 53}]};</script>
+<script src="assets/js/index.js" defer></script>
+
+</body>
+</html>

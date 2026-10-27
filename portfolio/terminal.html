@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arjun Mehta — Full-Stack Developer</title>
+<meta name="description" content="Arjun Mehta — Full-Stack Developer: demo portfolio template.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://picsum.photos">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .hero{background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(74,222,128,.025) 3px 4px)}
+  .hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:50px;align-items:center}
+  .hero h1{font-size:clamp(2.2rem,5.5vw,4.4rem)}
+  .hero h1 .c{color:var(--accent)}
+  .prompt{color:var(--muted);margin-bottom:18px;font-size:.9rem}
+  .prompt b{color:var(--accent)}
+  .term{border:1px solid var(--line);border-radius:10px;background:#070a07;box-shadow:var(--shadow);overflow:hidden;font-size:.86rem}
+  .term-bar{display:flex;gap:7px;padding:12px 14px;border-bottom:1px solid var(--line);align-items:center}
+  .term-bar i{width:11px;height:11px;border-radius:50%;background:#ef4444}.term-bar i:nth-child(2){background:#f59e0b}.term-bar i:nth-child(3){background:#22c55e}
+  .term-bar span{margin-left:auto;color:var(--muted);font-size:.75rem}
+  .term pre{padding:20px;white-space:pre-wrap;line-height:1.75;min-height:330px}
+  .term .k{color:#c084fc}.term .s{color:#fbbf24}.term .m{color:var(--muted)}.term .g{color:var(--accent)}
+  .glitch{position:relative}
+  .marquee-track span{font-size:clamp(1rem,2vw,1.4rem);font-weight:500}
+  .about-img img{filter:grayscale(1) contrast(1.1)}
+  .about-img::after{content:"";position:absolute;inset:0;background:var(--accent);mix-blend-mode:multiply;opacity:.35}
+  .preloader{font-size:1.2rem;font-weight:500}
+  @media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body data-theme="terminal">
+
+<div class="preloader">Arjun Mehta</div>
+<div class="progress"></div>
+<div class="cursor"></div><div class="cursor-dot"></div>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#home" class="logo"><b>AM</b>Arjun Mehta</a>
+    <nav class="nav-links"><a href="#about">About</a><a href="#services">Services</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+    <div class="nav-right">
+      <span class="status"><i></i>Available for work</span>
+      <button class="burger" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu"><a href="#about">About</a><a href="#services">Services</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a><a href="index.html" style="font-size:1rem;opacity:.6">← All templates</a></div>
+
+<main>
+
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <p class="prompt reveal"><b>~/arjun</b> $ whoami</p>
+        <h1 data-split>Hi, I build <span class="c">fast,</span> scalable things for the web.</h1>
+        <p class="lead reveal" style="--d:.2s">&gt; <span class="typed"></span><br>8+ years shipping production systems with TypeScript, Go and Postgres. Currently open to senior roles and freelance work.</p>
+        <div class="hero-ctas reveal" style="--d:.35s"><a href="#work" class="btn btn-primary magnetic">./view-projects</a><a href="#contact" class="btn btn-ghost magnetic">--hire-me</a></div>
+      </div>
+      <div class="term reveal" style="--d:.3s">
+        <div class="term-bar"><i></i><i></i><i></i><span>arjun@dev: ~/profile.ts</span></div>
+<pre id="term-code"></pre>
+      </div>
+    </div>
+    <a href="#about" class="scroll-hint" aria-label="Scroll down"></a>
+  </section>
+
+  <div class="marquee" id="marquee"></div>
+
+  <section class="section" id="about">
+    <div class="container about">
+      <div class="about-img img-reveal"><img src="https://picsum.photos/seed/pf-arjun/700/875" alt="Portrait of Arjun Mehta" loading="lazy"></div>
+      <div class="reveal">
+        <span class="eyebrow">About me</span>
+        <h2>I turn messy problems into clean, fast software.</h2>
+        <p>I’m a full-stack engineer who cares about the boring stuff that makes products great: latency budgets, accessible UIs and code your team will still understand in two years.</p><p>Previously led platform teams at a fintech unicorn, scaling APIs from 1K to 40K requests per second.</p>
+        <div class="stats"><div><strong data-count="8" data-suffix="+">0</strong><span>Years coding</span></div><div><strong data-count="60" data-suffix="+">0</strong><span>Projects shipped</span></div><div><strong data-count="42" data-suffix="">0</strong><span>OSS repos</span></div></div>
+        <div class="skills" id="skills"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal"><div><span class="eyebrow">Services</span><h2>What I can do for you</h2></div><p>Flexible engagements, from a two-week sprint to a long-term partnership.</p></div>
+      <div class="services" id="services-list"></div>
+    </div>
+  </section>
+
+  <section class="section" id="work" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal"><div><span class="eyebrow">Selected work</span><h2>Featured <i>projects</i></h2></div><div class="filters" id="filters"></div></div>
+      <div class="projects" id="projects"></div>
+    </div>
+  </section>
+
+  <section class="section" id="experience" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal"><div><span class="eyebrow">Experience</span><h2>The journey so far</h2></div><a href="#" class="btn btn-ghost magnetic">Download CV ↓</a></div>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal"><div><span class="eyebrow">Kind words</span><h2>What clients say</h2></div></div>
+      <div class="testi-grid" id="testimonials"></div>
+    </div>
+  </section>
+
+  <section class="section" id="contact" style="padding-top:0">
+    <div class="container contact">
+      <div class="reveal">
+        <span class="eyebrow">Contact</span>
+        <h2>Let’s build something great.</h2>
+        <p class="muted">Have a project in mind? Tell me a bit about it and I’ll reply within 24 hours.</p>
+        <div class="contact-list">
+          <a href="mailto:arjun@example.com"><span>✉</span>arjun@example.com</a>
+          <a href="tel:+10000000000"><span>☏</span>+1 (000) 000-0000</a>
+          <a href="#"><span>⌖</span>Remote · Worldwide</a>
+        </div>
+        <div class="socials"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="GitHub">gh</a><a href="#" aria-label="Dribbble">dr</a><a href="#" aria-label="Instagram">ig</a></div>
+      </div>
+      <form class="cform reveal" style="--d:.15s">
+        <div class="field"><input id="n" required placeholder=" "><label for="n">Your name</label></div>
+        <div class="field"><input id="e" type="email" required placeholder=" "><label for="e">Email address</label></div>
+        <div><p class="muted" style="font-size:.88rem;margin-bottom:10px">Budget</p>
+          <div class="chips"><input type="radio" name="b" id="b1" checked><label for="b1">&lt; $5k</label><input type="radio" name="b" id="b2"><label for="b2">$5k – $15k</label><input type="radio" name="b" id="b3"><label for="b3">$15k – $50k</label><input type="radio" name="b" id="b4"><label for="b4">$50k+</label></div></div>
+        <div class="field"><textarea id="m" required placeholder=" "></textarea><label for="m">Tell me about your project</label></div>
+        <button type="submit" class="btn btn-primary" style="justify-content:center">Send message →</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<div class="big-name">Arjun Mehta</div>
+<footer class="footer">
+  <div class="container"><span>© <span class="year"></span> Arjun Mehta. Demo template.</span><a href="index.html">← All templates</a><span>Made with HTML, CSS &amp; JS</span></div>
+</footer>
+
+<div class="modal" role="dialog" aria-modal="true"><div class="modal-box"><button class="modal-close" aria-label="Close">×</button><div class="modal-content"></div></div></div>
+<div class="toast" role="status"></div>
+<button class="to-top" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 15 6-6 6 6"/></svg></button>
+
+<script>window.PF = {"roles": ["Full-Stack Developer", "API Architect", "Open-Source Maintainer", "Performance Nerd"], "skills": [["TypeScript / Node.js", 95], ["React / Next.js", 92], ["Go & Microservices", 85], ["PostgreSQL / Redis", 88], ["AWS / Docker / K8s", 80]], "marquee": ["TypeScript", "Go", "React", "Next.js", "GraphQL", "PostgreSQL", "Redis", "Docker", "Kubernetes", "AWS", "Rust"], "services": [{"title": "Web Applications", "text": "End-to-end product builds with modern React and robust, typed back-ends.", "tags": ["Next.js", "tRPC", "Prisma"]}, {"title": "API & Backend", "text": "High-throughput REST/GraphQL services designed for scale and observability.", "tags": ["Go", "gRPC", "Kafka"]}, {"title": "Performance Audits", "text": "Core Web Vitals, database tuning and infra cost reduction, with measurable results.", "tags": ["Lighthouse", "pprof", "SQL"]}, {"title": "Tech Consulting", "text": "Architecture reviews, hiring help and mentoring for early-stage teams.", "tags": ["Architecture", "Mentoring"]}], "projects": [{"title": "PayStream Dashboard", "cat": "Web App", "client": "PayStream", "year": "2026", "seed": "ar-1", "text": "Real-time payments dashboard processing $2B/yr with sub-100ms updates over WebSockets.", "tags": ["Next.js", "Go", "WebSockets"]}, {"title": "Kite CLI", "cat": "Open Source", "client": "Community", "year": "2025", "seed": "ar-2", "text": "A blazing-fast deployment CLI with 12K GitHub stars and 300+ contributors.", "tags": ["Rust", "CLI"]}, {"title": "ShopFlow API", "cat": "Backend", "client": "ShopFlow", "year": "2025", "seed": "ar-3", "text": "Headless commerce API serving 40K rps with p99 latency under 80ms.", "tags": ["Go", "Postgres", "Redis"]}, {"title": "Notely", "cat": "Web App", "client": "Side project", "year": "2024", "seed": "ar-4", "text": "Offline-first markdown notes app with end-to-end encryption and CRDT sync.", "tags": ["React", "IndexedDB", "CRDT"]}, {"title": "Metrics Lens", "cat": "Open Source", "client": "Community", "year": "2024", "seed": "ar-5", "text": "Tiny observability library that adds tracing to any Node service in two lines.", "tags": ["TypeScript", "OpenTelemetry"]}, {"title": "HealthBridge Portal", "cat": "Backend", "client": "HealthBridge", "year": "2023", "seed": "ar-6", "text": "HIPAA-compliant patient portal integrating 30+ hospital systems.", "tags": ["Node.js", "FHIR", "AWS"]}], "timeline": [{"when": "2024 — Now", "role": "Senior Staff Engineer", "org": "Freelance & Consulting", "text": "Helping startups ship v1 fast and scale it sensibly."}, {"when": "2020 — 2024", "role": "Platform Lead", "org": "FinEdge (Fintech)", "text": "Led 12 engineers; rebuilt core ledger, cutting infra cost by 38%."}, {"when": "2018 — 2020", "role": "Full-Stack Developer", "org": "Cartly", "text": "Built the checkout that grew conversion by 22%."}, {"when": "2014 — 2018", "role": "B.Tech Computer Science", "org": "IIT Delhi", "text": "Graduated with honours; ACM ICPC regional finalist."}], "testimonials": [{"name": "Neha Sharma", "role": "CTO, PayStream", "text": "Arjun rebuilt our real-time layer in six weeks. Rock solid since day one.", "img": 47}, {"name": "David Kim", "role": "Founder, ShopFlow", "text": "Rare mix of deep backend chops and product sense. He’s my first call.", "img": 12}, {"name": "Lisa Grant", "role": "EM, FinEdge", "text": "The best tech lead I’ve worked with. Calm, thorough and always shipping.", "img": 32}]};</script>
+<script src="assets/js/index.js" defer></script>
+<script>window.addEventListener('DOMContentLoaded',()=>{
+  (()=>{const el=document.getElementById('term-code');if(!el)return;
+  const code=`<span class="k">const</span> arjun = {\n  role: <span class="s">"Full-Stack Developer"</span>,\n  location: <span class="s">"Bengaluru, IN"</span>,\n  stack: [<span class="s">"TypeScript"</span>, <span class="s">"Go"</span>, <span class="s">"React"</span>, <span class="s">"Postgres"</span>],\n  experience: <span class="g">8</span>, <span class="m">// years</span>\n  openSource: <span class="g">42</span>, <span class="m">// repos</span>\n  coffee: <span class="g">Infinity</span>,\n  available: <span class="k">true</span>\n};\n\n<span class="m">$</span> npm run hire -- --now\n<span class="g">✓ Ready to ship your next product.</span>`;
+  let i=0;const t=()=>{i+=2;let s=code.slice(0,i);if(s.lastIndexOf('<')>s.lastIndexOf('>')){i=code.indexOf('>',i)+1;s=code.slice(0,i)}el.innerHTML=s+'<span class="g">▋</span>';if(i<code.length)setTimeout(t,22)};setTimeout(t,1200)})();
+  });</script>
+</body>
+</html>

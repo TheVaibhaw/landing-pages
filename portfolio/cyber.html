@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kai Reyes — Creative Developer</title>
+<meta name="description" content="Kai Reyes — Creative Developer: demo portfolio template.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://picsum.photos">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .grid-floor{position:absolute;left:-50%;right:-50%;bottom:-10%;height:60%;z-index:-1;
+    background-image:linear-gradient(rgba(0,240,255,.35) 1px,transparent 1px),linear-gradient(90deg,rgba(255,43,214,.35) 1px,transparent 1px);background-size:60px 60px;
+    transform:perspective(500px) rotateX(65deg);animation:gridMove 3s linear infinite;mask-image:linear-gradient(transparent,#000 70%);-webkit-mask-image:linear-gradient(transparent,#000 70%)}
+  @keyframes gridMove{to{background-position:0 60px}}
+  .sun{position:absolute;top:18%;left:50%;width:min(480px,80vw);aspect-ratio:1;transform:translateX(-50%);border-radius:50%;z-index:-2;
+    background:linear-gradient(#ff2bd6,#ff8a00);filter:blur(2px);opacity:.35;mask-image:repeating-linear-gradient(transparent 0 14px,#000 14px 26px);-webkit-mask-image:repeating-linear-gradient(transparent 0 14px,#000 14px 26px)}
+  .hero{text-align:center}
+  .hero h1{font-size:clamp(2.4rem,8vw,6rem);text-transform:uppercase;letter-spacing:.02em}
+  .neon{color:var(--accent);text-shadow:0 0 10px var(--accent),0 0 40px var(--accent)}
+  .neon2{color:var(--accent-2);text-shadow:0 0 10px var(--accent-2),0 0 40px var(--accent-2)}
+  .hero .lead{margin-inline:auto}
+  .hero-ctas{justify-content:center}
+  .glitch{position:relative;display:inline-block}
+  .glitch::before,.glitch::after{content:attr(data-text);position:absolute;inset:0}
+  .glitch::before{color:var(--accent-2);animation:g1 2.6s infinite steps(2);clip-path:inset(0 0 60% 0)}
+  .glitch::after{color:var(--accent);animation:g2 3.1s infinite steps(2);clip-path:inset(55% 0 0 0)}
+  @keyframes g1{0%,92%{transform:none}94%{transform:translate(-4px,2px)}96%{transform:translate(3px,-1px)}}
+  @keyframes g2{0%,90%{transform:none}93%{transform:translate(4px,1px)}97%{transform:translate(-3px,-2px)}}
+  .badge-row{display:flex;gap:10px;justify-content:center;margin-bottom:22px;flex-wrap:wrap}
+  .badge-row span{padding:6px 14px;border:1px solid var(--line);border-radius:999px;font-size:.8rem;background:rgba(0,240,255,.06)}
+  .section-head h2,.about h2,.contact h2{text-transform:uppercase}
+  .service,.testi,form.cform{backdrop-filter:blur(10px)}
+  .service:hover{box-shadow:var(--shadow)}
+  .project-media{border:1px solid var(--line)}
+  .project:hover .project-media img{filter:hue-rotate(40deg) saturate(1.4)}
+  .about-img{border:1px solid var(--accent);box-shadow:var(--shadow)}
+  .marquee-track span{text-transform:uppercase;font-size:clamp(1.1rem,2.4vw,1.8rem)}
+  .marquee-track span:nth-child(even){color:var(--accent-2)}
+  .preloader{background:#05050f;color:var(--accent);text-shadow:0 0 20px var(--accent)}
+  </style>
+</head>
+<body data-theme="cyber">
+
+<div class="preloader">Kai Reyes</div>
+<div class="progress"></div>
+<div class="cursor"></div><div class="cursor-dot"></div>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#home" class="logo"><b>KR</b>Kai Reyes</a>
+    <nav class="nav-links"><a href="#about">About</a><a href="#services">Services</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+    <div class="nav-right">
+      <span class="status"><i></i>Available for work</span>
+      <button class="burger" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu"><a href="#about">About</a><a href="#services">Services</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a><a href="index.html" style="font-size:1rem;opacity:.6">← All templates</a></div>
+
+<main>
+
+  <section class="hero" id="home">
+    <div class="sun" data-parallax=".25"></div>
+    <div class="grid-floor"></div>
+    <div class="container">
+      <div class="badge-row reveal"><span>⚡ Awwwards SOTD ×6</span><span>🏆 FWA of the Month</span></div>
+      <h1 data-split>Code <span class="neon">meets</span> <span class="neon2">art.</span></h1>
+      <p class="lead reveal" style="--d:.3s">I’m Kai, a <span class="typed"></span> building immersive 3D websites, generative visuals and interactive experiences for bold brands.</p>
+      <div class="hero-ctas reveal" style="--d:.45s"><a href="#work" class="btn btn-primary magnetic">Enter the portfolio</a><a href="#contact" class="btn btn-ghost magnetic">Start a project</a></div>
+    </div>
+    <a href="#about" class="scroll-hint" aria-label="Scroll down"></a>
+  </section>
+
+  <div class="marquee" id="marquee"></div>
+
+  <section class="section" id="about">
+    <div class="container about">
+      <div class="about-img img-reveal"><img src="https://picsum.photos/seed/pf-kai/700/875" alt="Portrait of Kai Reyes" loading="lazy"></div>
+      <div class="reveal">
+        <span class="eyebrow">About me</span>
+        <h2>Pixels, shaders & a lot of late nights.</h2>
+        <p>I sit between design and engineering, turning wild concepts into buttery-smooth 60fps experiences with Three.js, GLSL and GSAP.</p><p>Clients include Nike, Spotify and Red Bull. My experiments have been viewed 3M+ times on CodePen and X.</p>
+        <div class="stats"><div><strong data-count="6" data-suffix="">0</strong><span>Years</span></div><div><strong data-count="48" data-suffix="">0</strong><span>Awards</span></div><div><strong data-count="3" data-suffix="M">0</strong><span>CodePen views</span></div></div>
+        <div class="skills" id="skills"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal"><div><span class="eyebrow">Services</span><h2>What I can do for you</h2></div><p>Flexible engagements, from a two-week sprint to a long-term partnership.</p></div>
+      <div class="services" id="services-list"></div>
+    </div>
+  </section>
+
+  <section class="section" id="work" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal"><div><span class="eyebrow">Selected work</span><h2>Featured <i>projects</i></h2></div><div class="filters" id="filters"></div></div>
+      <div class="projects" id="projects"></div>
+    </div>
+  </section>
+
+  <section class="section" id="experience" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal"><div><span class="eyebrow">Experience</span><h2>The journey so far</h2></div><a href="#" class="btn btn-ghost magnetic">Download CV ↓</a></div>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal"><div><span class="eyebrow">Kind words</span><h2>What clients say</h2></div></div>
+      <div class="testi-grid" id="testimonials"></div>
+    </div>
+  </section>
+
+  <section class="section" id="contact" style="padding-top:0">
+    <div class="container contact">
+      <div class="reveal">
+        <span class="eyebrow">Contact</span>
+        <h2>Let’s build something great.</h2>
+        <p class="muted">Have a project in mind? Tell me a bit about it and I’ll reply within 24 hours.</p>
+        <div class="contact-list">
+          <a href="mailto:kai@example.com"><span>✉</span>kai@example.com</a>
+          <a href="tel:+10000000000"><span>☏</span>+1 (000) 000-0000</a>
+          <a href="#"><span>⌖</span>Remote · Worldwide</a>
+        </div>
+        <div class="socials"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="GitHub">gh</a><a href="#" aria-label="Dribbble">dr</a><a href="#" aria-label="Instagram">ig</a></div>
+      </div>
+      <form class="cform reveal" style="--d:.15s">
+        <div class="field"><input id="n" required placeholder=" "><label for="n">Your name</label></div>
+        <div class="field"><input id="e" type="email" required placeholder=" "><label for="e">Email address</label></div>
+        <div><p class="muted" style="font-size:.88rem;margin-bottom:10px">Budget</p>
+          <div class="chips"><input type="radio" name="b" id="b1" checked><label for="b1">&lt; $5k</label><input type="radio" name="b" id="b2"><label for="b2">$5k – $15k</label><input type="radio" name="b" id="b3"><label for="b3">$15k – $50k</label><input type="radio" name="b" id="b4"><label for="b4">$50k+</label></div></div>
+        <div class="field"><textarea id="m" required placeholder=" "></textarea><label for="m">Tell me about your project</label></div>
+        <button type="submit" class="btn btn-primary" style="justify-content:center">Send message →</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<div class="big-name">Kai Reyes</div>
+<footer class="footer">
+  <div class="container"><span>© <span class="year"></span> Kai Reyes. Demo template.</span><a href="index.html">← All templates</a><span>Made with HTML, CSS &amp; JS</span></div>
+</footer>
+
+<div class="modal" role="dialog" aria-modal="true"><div class="modal-box"><button class="modal-close" aria-label="Close">×</button><div class="modal-content"></div></div></div>
+<div class="toast" role="status"></div>
+<button class="to-top" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 15 6-6 6 6"/></svg></button>
+
+<script>window.PF = {"roles": ["Creative Developer", "WebGL Artist", "Interactive Engineer"], "skills": [["Three.js / WebGL", 95], ["GLSL Shaders", 88], ["GSAP & Motion", 94], ["React Three Fiber", 90], ["Blender", 78]], "marquee": ["Three.js", "WebGL", "GLSL", "GSAP", "WebXR", "R3F", "Blender", "Houdini", "TouchDesigner"], "services": [{"title": "3D Websites", "text": "Immersive, scroll-driven 3D experiences that load fast and feel alive.", "tags": ["Three.js", "R3F"]}, {"title": "Creative Coding", "text": "Generative art, shaders and audio-reactive visuals for brands and events.", "tags": ["GLSL", "p5.js"]}, {"title": "Motion & Interaction", "text": "Micro-interactions and page transitions that make UIs feel premium.", "tags": ["GSAP", "Lenis"]}, {"title": "WebXR & Installations", "text": "AR/VR web experiences and interactive installations.", "tags": ["WebXR", "TouchDesigner"]}], "projects": [{"title": "Neon Drift", "cat": "3D Web", "client": "Nike", "year": "2026", "seed": "ky-1", "text": "A playable 3D sneaker launch with real-time reflections and 2M visits in week one.", "tags": ["Three.js", "GLSL"]}, {"title": "Soundwaves", "cat": "Generative", "client": "Spotify", "year": "2025", "seed": "ky-2", "text": "Audio-reactive visualiser for Spotify Wrapped, generated per listener.", "tags": ["WebAudio", "Shaders"]}, {"title": "Rush Hour", "cat": "3D Web", "client": "Red Bull", "year": "2025", "seed": "ky-3", "text": "Scroll-driven race experience with physics and 60fps on mobile.", "tags": ["R3F", "Rapier"]}, {"title": "Chroma Lab", "cat": "Generative", "client": "Personal", "year": "2024", "seed": "ky-4", "text": "Open-source shader playground with 40K monthly users.", "tags": ["GLSL", "WebGPU"]}, {"title": "Echo Room", "cat": "Installation", "client": "Tate Modern", "year": "2024", "seed": "ky-5", "text": "Interactive light installation reacting to visitor movement.", "tags": ["TouchDesigner", "Kinect"]}, {"title": "Orbital", "cat": "3D Web", "client": "SpaceTech", "year": "2023", "seed": "ky-6", "text": "Real-time satellite tracker with 10K objects rendered in WebGL.", "tags": ["WebGL", "Instancing"]}], "timeline": [{"when": "2023 — Now", "role": "Founder & Creative Dev", "org": "Studio Nova", "text": "Building award-winning immersive work for global brands."}, {"when": "2021 — 2023", "role": "Senior Creative Developer", "org": "Active Theory", "text": "Shipped 3D campaigns for Google, Nike and Marvel."}, {"when": "2019 — 2021", "role": "Interactive Developer", "org": "Resn", "text": "Built experimental sites and WebGL prototypes."}, {"when": "2015 — 2019", "role": "BSc Computer Graphics", "org": "Bournemouth University", "text": "Specialised in real-time rendering."}], "testimonials": [{"name": "Ava Chen", "role": "Creative Director, Nike", "text": "Kai delivered magic on an impossible timeline. Our launch broke records.", "img": 9}, {"name": "Marco Silva", "role": "Head of Digital, Red Bull", "text": "Technically brilliant and artistically fearless. The best in the game.", "img": 60}, {"name": "Julia Novak", "role": "Producer, Spotify", "text": "Every frame was considered. A dream collaborator.", "img": 25}]};</script>
+<script src="assets/js/index.js" defer></script>
+
+</body>
+</html>
